@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 
 @app.route('/pets', methods=['GET'])
-def getPet():
+def pets():
     return{
         'userId':1,
         'title': 'Flask React App',
@@ -20,4 +20,4 @@ def getPet():
     }
     
 
-print("PostgreSQL connected",getPet)
+# print("PostgreSQL connected",getPet)
