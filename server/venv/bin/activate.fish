@@ -29,7 +29,11 @@ end
 # unset irrelevant variables
 deactivate nondestructive
 
+<<<<<<< HEAD
+set -gx VIRTUAL_ENV "/Users/jayden/prime/Nagle/tier3/week16/python-rest-api/venv"
+=======
 set -gx VIRTUAL_ENV "/Users/baaiinn/prime/tier3/python-rest-api/server/venv"
+>>>>>>> master
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
