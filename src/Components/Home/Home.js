@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-
+import Nav from "../Nav/Nav";
 class Home extends Component {
     render() {
         return (
+          <>
+            <Nav />
             <header>
-                <h1>Pet Hotel</h1>
+              <h1>Pet Hotel</h1>
             </header>
-        )//end return
+          </>
+        );//end return
     }//end render
 }//end class
 
