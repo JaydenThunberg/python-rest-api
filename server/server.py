@@ -7,10 +7,10 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 # configures connection to database
-# mainConnection = psycopg2.connect(user="nailahjohnson",
-#                                        host="localhost",
-#                                        port="5432",
-#                                        database="pets")
+mainConnection = psycopg2.connect(user="nailahjohnson",
+                                       host="localhost",
+                                       port="5432",
+                                       database="pets")
 
 
 @app.route('/pets', methods=['GET'])
