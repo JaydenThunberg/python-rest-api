@@ -1,5 +1,6 @@
 import React, {useState,useEffect} from 'react';
 import './App.css';
+import Nav from './Nav'
 
 function App() {
   const [initialPetData, setInitialPetData] = useState({})
@@ -16,6 +17,7 @@ function App() {
   return (
     <div className="App">
       <p>hello</p>
+      <Nav />
     <h1>{initialPetData.title}</h1>
     </div>
   );
