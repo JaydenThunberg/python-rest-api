@@ -1,4 +1,4 @@
-#!/Users/baaiinn/prime/tier3/python-rest-api/venv/bin/python3
+#!/Users/baaiinn/prime/tier3/python-rest-api/server/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
