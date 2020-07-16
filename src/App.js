@@ -12,6 +12,7 @@ function App() {
         setInitialPetData(data)
       })
   },[])
+  //the [] makes it not fire off repeatedly. useEffect is essentially component did mount
   return (
     <div className="App">
       <p>hello</p>
