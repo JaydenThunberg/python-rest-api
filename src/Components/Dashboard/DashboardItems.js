@@ -1,15 +1,13 @@
 //this will have the map of table items
-import React, { Component } from 'react';
+import React from 'react';
 
-class DashboardItems extends Component {
-  // Renders the entire DashboardItems on the DOM
-  render() {
+function DashboardItems() {
+    // Renders the entire DashboardItems on the DOM
     return (
-      <div className="DashboardItems">
-        <p>DashboardItems</p>
-      </div>
+        <div className="DashboardItems">
+            <p>DashboardItems</p>
+        </div>
     );
-  }
 }
 
 export default DashboardItems;
