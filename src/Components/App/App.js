@@ -1,6 +1,9 @@
 import React, {useState,useEffect} from 'react';
 import './App.css';
-import Nav from './Components/Nav/Nav'
+import Home from '../Home/Home';
+import Dashboard from '../Dashboard/Dashboard';
+import Manage from '../Manage/Manage';
+import Nav from '../Nav/Nav';
 
 function App() {
   
@@ -17,6 +20,9 @@ function App() {
   //the [] makes it not fire off repeatedly. useEffect is essentially component did mount
   return (
     <div className="App">
+      <Home/>
+      <Dashboard/>
+      <Manage/>
       <p>hello</p>
       <Nav />
     <h1>{initialPetData.title}</h1>

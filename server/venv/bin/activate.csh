@@ -9,7 +9,11 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 deactivate nondestructive
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 setenv VIRTUAL_ENV "/Users/jakedahl/Documents/python-rest-api/venv"
+=======
+setenv VIRTUAL_ENV "/Users/jayden/prime/Nagle/tier3/week16/python-rest-api/venv"
+>>>>>>> master
 =======
 setenv VIRTUAL_ENV "/Users/baaiinn/prime/tier3/python-rest-api/server/venv"
 >>>>>>> master
