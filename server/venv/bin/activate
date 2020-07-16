@@ -37,7 +37,11 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
+<<<<<<< HEAD
 VIRTUAL_ENV="/Users/jayden/prime/Nagle/tier3/week16/python-rest-api/venv"
+=======
+VIRTUAL_ENV="/Users/baaiinn/prime/tier3/python-rest-api/server/venv"
+>>>>>>> master
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
