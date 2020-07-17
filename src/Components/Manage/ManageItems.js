@@ -1,15 +1,13 @@
 //this will be items from map of owners with delete btn
-import React, { Component } from 'react';
+import React from 'react';
 
-class ManageItems extends Component {
-  // Renders the entire ManageItems on the DOM
-  render() {
+function ManageItems() {
+    // Renders the entire ManageItems on the DOM
     return (
-      <div className="ManageItems">
-        <p>ManageItems</p>
-      </div>
+        <div className="ManageItems">
+            <p>ManageItems</p>
+        </div>
     );
-  }
 }
 
 export default ManageItems;
