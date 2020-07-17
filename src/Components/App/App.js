@@ -1,34 +1,32 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
-import Home from '../Home/Home';
-import Dashboard from '../Dashboard/Dashboard';
-import Manage from '../Manage/Manage';
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import Home from "../Home/Home";
+import Dashboard from "../Dashboard/Dashboard";
+import Manage from "../Manage/Manage";
+import Nav from '../Nav/Nav'
 
 function App() {
+  const [initialPetData, setInitialPetData] = useState({});
 
-  //this.state = initialPetData, useState = setState(state empty object)
-  const [initialPetData, setInitialPetData] = useState({})
-
-  //useEffect similar to componentDidMount
   useEffect(() => {
-    getPets()
-  }, [])
+    fetch("/pets")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setInitialPetData(data);
+      });
+  }, []);
   //the [] makes it not fire off repeatedly. useEffect is essentially component did mount
-
-  const getPets = () => {
-    fetch('/pets').then(
-      response => response.json()
-    ).then(data => {
-      console.log(data)
-      setInitialPetData(data)
-    })
-  }
   return (
     <div className="App">
-      <Home />
-      <Dashboard />
-      <Manage />
-      <p>hello</p>
+      <header>
+        <h1>Pet Hotel</h1>
+      </header>
+      <Nav/>
+
+      {/* <Dashboard />
+      <Manage /> */}
+
       <h1>{initialPetData.title}</h1>
     </div>
   );

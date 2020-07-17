@@ -8,6 +8,9 @@ function Manage() {
     const addOwner = () => {
         console.log('add owner clicked')
     }
+    const deleteOwner = () => {
+        console.log('delete owner clicked')
+    }
     return (
         <div className="Manage">
             <div>
@@ -30,7 +33,7 @@ function Manage() {
                       <TableRow key={item.?}>
                         <TableCell scope="row">{item.name}</TableCell>
                         <TableCell align="right">{item.numPets}</TableCell> 
-                        <TableCell align="left"><button>Delete</button></TableCell>
+                        <TableCell align="left"><button onClick={deleteOwner}>Delete</button></TableCell>
                       </TableRow>
                     ))}
                   </TableBody> */}
@@ -39,7 +42,7 @@ function Manage() {
                                 <TableCell scope="row">Jayden</TableCell>
                                 <TableCell align="left">1</TableCell>
                                 <TableCell align="left">
-                                    <Button>Delete</Button>
+                                    <Button onClick={deleteOwner}>Delete</Button>
                                 </TableCell>
                             </TableRow>
                         </TableBody>

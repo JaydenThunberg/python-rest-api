@@ -8,6 +8,12 @@ function Dashboard() {
   const addPet = () => {
     console.log('addPet clicked')
   }
+  const deletePet = () => {
+    console.log('deletePet clicked')
+  }
+  const checkInPet = () => {
+    console.log('checkInPet clicked')
+  }
   return (
     <div className="Dashboard">
       <div>
@@ -40,8 +46,8 @@ function Dashboard() {
                  <TableCell align="right">{item.breed}</TableCell> 
                 <TableCell align="left">{item.checkedIn}</TableCell>
                   <TableCell align="left">
-                  <button>Delete</button>
-                  <button>Checked In</button>
+                  <button onClick={deletePet}>Delete</button>
+                  <button onClick={checkInPet}>Checked In</button>
                   </TableCell>
                 </TableRow>
               ))}
@@ -53,8 +59,8 @@ function Dashboard() {
                   <TableCell align="left">Miniature Poodle</TableCell>
                   <TableCell align="left">no</TableCell>
                   <TableCell align="left">
-                    <Button>Delete</Button>
-                    <Button>Checked In</Button>
+                    <Button onClick={deletePet}>Delete</Button>
+                    <Button onClick={checkInPet}>Checked In</Button>
                     </TableCell>
                 </TableRow>
               </TableBody>
