@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+import psycopg2
 
 app = Flask(__name__)
 
@@ -45,3 +46,30 @@ def getPet():
             # logs that connection is closed
             print("PostgreSQL connection is closed")
 # END GET ROUTE for PETS TABLE
+
+
+@app.route("/add", methods=["POST"])
+def postPet():
+    print(request.json)
+    try:
+        connection = mainConnection
+        cursor = connection.cursor()
+        # replace template %s with record_to_insert
+        postgres_insert_query = """INSERT INTO "pets" ("owner_id", "pet_name", "breed", "color", "status") VALUES (%s,%s,%s,%s,%s) """
+        # record_to_insert must be interable
+        record_to_insert = (request.json['owner_id'], request.json['pet_name'],
+                            request.json['breed'], request.json['color'], request.json['status'])
+        cursor.execute(postgres_insert_query, record_to_insert)
+        connection.commit()
+        return 'HTTP_201_Created'
+    except (Exception, psycopg2.Error) as error:
+        if(connection):
+            print("Failed to POST to db", error)
+            return 'failed'
+    finally:
+        # closing database connection.
+        if(connection):
+            cursor.close()
+        #   connection.close()
+            print("PostgreSQL cursor is closed")
+            return 'finally'
