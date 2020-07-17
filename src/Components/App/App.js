@@ -26,11 +26,14 @@ function App() {
   }
   return (
     <div className="App">
-      <Home />
-      <Dashboard />
-      <Manage />
-      <p>hello</p>
 
+      <header>
+        <h1>Pet Hotel</h1>
+      </header>
+      <Nav/>
+
+      {/* <Dashboard />
+      <Manage /> */}
       <h1>{initialPetData.title}</h1>
     </div>
   );
