@@ -1,13 +1,16 @@
 //this have add owner input, table outline for owners(th: name, number of pets, action), and map for owners
 import React from 'react';
+
 //material-ui for temporary table
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Button } from '@material-ui/core';
+
 
 function Manage() {
     // Renders the entire Manage on the DOM
     const addOwner = () => {
         console.log('add owner clicked')
     }
+
     const deleteOwner = () => {
         console.log('delete owner clicked')
     }
