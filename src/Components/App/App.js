@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Home from '../Home/Home';
@@ -29,6 +30,7 @@ function App() {
       <Dashboard />
       <Manage />
       <p>hello</p>
+
       <h1>{initialPetData.title}</h1>
     </div>
   );

@@ -1,11 +1,14 @@
 //this will have add pet inputs, table outline, and map for table
 import React from 'react';
 
+
 function Dashboard() {
+
     // Renders the entire Dashboard on the DOM
     const addPet = () => {
         console.log('addPet clicked')
     }
+
     return (
         <div className="Dashboard">
             <div>
@@ -22,6 +25,7 @@ function Dashboard() {
             </div>
         </div>
     );
+
 }
 
 export default Dashboard;
