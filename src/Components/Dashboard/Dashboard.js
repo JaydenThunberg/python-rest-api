@@ -1,30 +1,31 @@
 //this will have add pet inputs, table outline, and map for table
-import React, { Component } from 'react';
+import React from 'react';
 
 
-class Dashboard extends Component {
+function Dashboard() {
+
     // Renders the entire Dashboard on the DOM
-    addPet = () => {
+    const addPet = () => {
         console.log('addPet clicked')
     }
-    render() {
-        return (
-          <div className="Dashboard">
+
+    return (
+        <div className="Dashboard">
             <div>
-              <h3>Add Pet</h3>
-              <div>
-                <input placeholder="Pet Name" />
-                <input placeholder="Pet Color" />
-                <input placeholder="Pet Breed" />
-                <select>
-                  <option>Owner Name</option>
-                </select>
-                <button onClick={this.addPet}>Submit</button>
-              </div>
+                <h3>Add Pet</h3>
+                <div>
+                    <input placeholder="Pet Name" />
+                    <input placeholder="Pet Color" />
+                    <input placeholder="Pet Breed" />
+                    <select>
+                        <option>Owner Name</option>
+                    </select>
+                    <button onClick={addPet}>Submit</button>
+                </div>
             </div>
-          </div>
-        );
-    }
+        </div>
+    );
+
 }
 
 export default Dashboard;
